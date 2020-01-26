@@ -354,7 +354,7 @@ class DataclassTransformer:
             sym_node = info.names.get(attr.name)
             if sym_node is not None:
                 var = sym_node.node
-                assert isinstance(var, Var)
+                # assert isinstance(var, Var)
                 var.is_property = True
             else:
                 var = attr.to_var()
