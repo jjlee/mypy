@@ -242,6 +242,8 @@ class DataclassTransformer:
             if isinstance(node, PlaceholderNode):
                 # This node is not ready yet.
                 return None
+            elif not isinstance(node, Var):
+                continue
             assert isinstance(node, Var)
 
             # x: ClassVar[int] is ignored by dataclasses.
